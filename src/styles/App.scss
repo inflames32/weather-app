@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 .app {
   background-color: white;
   width: 20rem;
@@ -71,23 +72,7 @@
   align-items: center;
   margin: auto;
 }
-.weather-humidity,
-.weather-wind {
-  display: flex;
-  align-items: center;
-  width: 50%;
-  height: 100%;
-  margin-top: 2rem;
-  &-icon {
-    width: 4rem;
-    height: 4rem;
-  }
-}
-.weather-humidity-label,
-.weather-wind-label {
-  font-size: 0.8rem;
-  font-weight: 800;
-}
+
 .weather-details {
   width: 80%;
   height: 3rem;
@@ -97,16 +82,17 @@
   margin: 1rem auto;
 }
 .weather-city {
+  font-family: "Ubuntu", sans-serif;
   margin-left: 1rem;
 }
 .weather-city,
 .weather-country {
-  font-family: Lato, sans-serif;
   font-weight: 800;
   font-size: 2rem;
 }
 .weather-country {
   margin-left: 1rem;
+  font-family: Lato, sans-serif;
 }
 .weather-country-flag {
   margin-left: 2rem;
@@ -117,9 +103,34 @@
   font-size: 5rem;
   font-weight: 800;
   margin: auto;
+  text-align: center;
 }
 .weather-temp-celcius {
   font-family: lato, sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
+}
+.weather-humidity,
+.weather-wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+
+  &-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+.weather-humidity-number {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.weather-wind-block-text {
+  font-size: 2rem;
+  font-weight: 800;
+}
+.weather-wind-block {
+  display: flex;
+  flex-direction: column;
 }

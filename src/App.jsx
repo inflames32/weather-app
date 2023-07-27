@@ -98,17 +98,23 @@ export default function App() {
                 className="weather-humidity-icon"
                 alt="weather-humidity-icon"
               />
-              <div className="weather-humidity-number">
-                {cityWeather.main.humidity}
+              <div className="weather-humidity-block">
+                <span className="weather-humidity-number">
+                  {cityWeather.main.humidity}
+                </span>
                 <span className="weather-humidity-label">% d'humidité</span>
               </div>
             </div>
           )}
           {cityWeather.wind && (
             <div className="weather-wind">
-              <img src={Wind} className="weather-humidity-icon" alt="" />
-              {cityWeather.wind.speed} KM/h
-              <span className="weather-wind-label">Vitesse du vent</span>
+              <img src={Wind} className="weather-wind-icon" alt="" />
+              <div className="weather-wind-block">
+                <span className="weather-wind-block-text">
+                  {cityWeather.wind.speed}
+                </span>
+                <span className="weather-wind-label">km/h</span>
+              </div>
             </div>
           )}
         </div>
