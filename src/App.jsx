@@ -1,13 +1,20 @@
 import { useState, useEffect } from "react";
+import AOS from "aos";
 import SearchIcon from "../src/assets/magnifying-glass-solid.svg";
 import Location from "../src/assets/location.svg";
 import HumidityIcon from "../src/assets/humidity-svgrepo-com.svg";
 import Wind from "../src/assets/wind.svg";
+
+import "aos/dist/aos.css";
 import "../src/styles/App.scss";
 
 export default function App() {
   const [cityWeather, setCityWeather] = useState({});
   const [cityName, setCityName] = useState("");
+  useEffect(() => {
+    AOS.init();
+  }, [cityWeather, cityName]);
+
   const changeCity = (e) => {
     e.preventDefault();
     setCityName(e.target.value);
@@ -22,7 +29,6 @@ export default function App() {
         `
       );
       const response = await temp.json();
-      console.log(response);
       setCityWeather(response);
     } catch (err) {
       console.log(err);
@@ -58,7 +64,7 @@ export default function App() {
       </form>
       <div className="weather-container">
         {cityWeather.sys && (
-          <div>
+          <div data-aos="fade-right">
             <p className="weather-details">
               <span className="weather-city">{cityWeather.name}</span>
               <span className="weather-country">{cityWeather.sys.country}</span>
@@ -70,7 +76,11 @@ export default function App() {
           </div>
         )}
         {cityWeather.weather && (
-          <div className="weather-img">
+          <div
+            className="weather-img"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img
               src={`https://openweathermap.org/img/wn/${cityWeather.weather[0].icon}@2x.png`}
               alt=""
@@ -83,7 +93,7 @@ export default function App() {
         )}
 
         {cityWeather.main && (
-          <div className="weather-temp">
+          <div className="weather-temp" data-aos="fade-left">
             {cityWeather.main.temp}
             <span className="weather-temp-celcius">°C</span>
           </div>
@@ -93,7 +103,11 @@ export default function App() {
         )}
         <div className="weather-info">
           {cityWeather.main && (
-            <div className="weather-humidity">
+            <div
+              className="weather-humidity"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <img
                 src={HumidityIcon}
                 className="weather-humidity-icon"
@@ -108,7 +122,11 @@ export default function App() {
             </div>
           )}
           {cityWeather.wind && (
-            <div className="weather-wind">
+            <div
+              className="weather-wind"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               <img src={Wind} className="weather-wind-icon" alt="" />
               <div className="weather-wind-block">
                 <span className="weather-wind-block-text">
