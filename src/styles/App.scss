@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap");
+
+.app {
+  background-color: white;
+  width: 20rem;
+  height: 35rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.form {
+  display: flex;
+  align-items: center;
+  width: 20em;
+  height: 2em;
+  &-input {
+    width: 18em;
+    margin-right: 1em;
+    border: none;
+  }
+  &-location {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    &-icon {
+      width: 1.8em;
+      height: 1.8em;
+    }
+  }
+  &-search {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    background-color: rgb(194, 209, 213);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: none;
+
+    &-icon {
+      width: 1em;
+      height: 1em;
+    }
+  }
+}
+.weather-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  &-icon {
+    width: auto;
+    height: 100%;
+  }
+}
+.weather-description {
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 1rem auto;
+}
+.weather-info {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+.weather-humidity,
+.weather-wind {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 2rem;
+  &-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.weather-humidity-label,
+.weather-wind-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+.weather-details {
+  width: 80%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem auto;
+}
+.weather-city {
+  margin-left: 1rem;
+}
+.weather-city,
+.weather-country {
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+.weather-country {
+  margin-left: 1rem;
+}
+.weather-country-flag {
+  margin-left: 2rem;
+}
+.weather-temp {
+  width: 90%;
+  font-family: "Rubik", sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  margin: auto;
+}
+.weather-temp-celcius {
+  font-family: lato, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
