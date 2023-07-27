@@ -15,8 +15,17 @@
   height: 2em;
   &-input {
     width: 18em;
+    height: 2rem;
     margin-right: 1em;
     border: none;
+    padding-left: 1rem;
+  }
+  &-input::placeholder {
+    text-align: center;
+  }
+  &-input:focus {
+    border: solid #0e0e0e 1px;
+    border-radius: 5px;
   }
   &-location {
     display: flex;
@@ -98,6 +107,7 @@
   margin-left: 2rem;
 }
 .weather-temp {
+  position: relative;
   width: 90%;
   font-family: "Rubik", sans-serif;
   font-size: 5rem;
@@ -106,6 +116,9 @@
   text-align: center;
 }
 .weather-temp-celcius {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-family: lato, sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
@@ -130,7 +143,10 @@
   font-size: 2rem;
   font-weight: 800;
 }
-.weather-wind-block {
+.weather-wind-block,
+.weather-humidity-block {
   display: flex;
   flex-direction: column;
+  text-align: center;
+  width: 100%;
 }

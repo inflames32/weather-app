@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import SearchIcon from "../src/assets/magnifying-glass-solid.svg";
-import Location from "../src/assets/location-dot-solid.svg";
+import Location from "../src/assets/location.svg";
 import HumidityIcon from "../src/assets/humidity-svgrepo-com.svg";
 import Wind from "../src/assets/wind.svg";
 import "../src/styles/App.scss";
@@ -45,6 +45,7 @@ export default function App() {
           onChange={changeCity}
           value={cityName}
           name={cityName}
+          placeholder="Rechercher une ville..."
         />
 
         <button className="form-search">
